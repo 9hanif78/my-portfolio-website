@@ -90,6 +90,8 @@ if (typeof Swiper !== 'undefined') {
    })
 }
 
+
+
 /*=============== SERVICES ACCORDION ===============*/
 const serviceCards = document.querySelectorAll('.services__card')
 
@@ -122,35 +124,43 @@ if (testimonialsSlider) {
    })
 }
 
-/*=============== CONTACT EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form')
-const contactMessage = document.getElementById('contact-message')
 
-if (contactForm) {
-   contactForm.addEventListener('submit', (e) => {
-      e.preventDefault()
+/*=============== EMAILJS CONTACT FORM LOGIC ===============*/
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contact-form'),
+        contactMessage = document.getElementById('contact-message');
 
-      if (typeof emailjs !== 'undefined') {
-         // Replace with your EmailJS credentials from https://www.emailjs.com/
-         // emailjs.sendForm('serviceID', 'templateID', contactForm, 'publicKey')
-         showMessage('Configure EmailJS to enable sending. Email me at 9hanif78@gmail.com', false)
-      } else {
-         showMessage('Thank you! Please email me directly at 9hanif78@gmail.com', true)
-      }
+  // Guard clause to ensure elements exist before binding events
+  if (!contactForm) {
+    console.error("Error: '#contact-form' element not found in the DOM.");
+    return;
+  }
 
-      contactForm.reset()
-   })
-}
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-const showMessage = (text, success) => {
-   contactMessage.textContent = text
-   contactMessage.style.color = success ? 'var(--first-color)' : 'hsl(358, 80%, 55%)'
-   contactMessage.classList.add('show')
+    // serviceID - templateID - #formID
+    emailjs.sendForm('service_jdt84la', 'template_do8dwya', '#contact-form')
+      .then(() => {
+        // Show success message to the user
+        contactMessage.textContent = 'Message sent successfully! ✅';
 
-   setTimeout(() => {
-      contactMessage.classList.remove('show')
-   }, 5000)
-}
+        // Clear the message text after 5 seconds
+        setTimeout(() => {
+          contactMessage.textContent = '';
+        }, 5000);
+
+        // Clear all form input fields
+        contactForm.reset();
+      }, (error) => {
+        // Show error message if something fails
+        contactMessage.textContent = 'Oops! Something went wrong... ❌';
+        console.error('EmailJS Error Details:', error);
+      });
+  };
+
+  contactForm.addEventListener('submit', sendEmail);
+});
 
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = document.getElementById('scroll-up')

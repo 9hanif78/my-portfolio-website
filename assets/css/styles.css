@@ -317,7 +317,7 @@ address {
 }
 
 /*=============== HOME SECTION ===============*/
-.home {
+/* .home {
   position: relative;
   padding-top: calc(var(--header-height) + 3rem);
   min-height: 100vh;
@@ -340,6 +340,7 @@ address {
   font-size: var(--biggest-font-size);
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  
 }
 
 .home__title span,
@@ -410,6 +411,150 @@ address {
 .home__blob-2 {
   bottom: 10%;
   left: 5%;
+} */
+
+
+/*=============== HOME SECTION ===============*/
+.home {
+  position: relative;
+  padding-top: calc(var(--header-height) + 3rem);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .home__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.home__data {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  margin-bottom: 1rem;
+}
+
+/* Structural Layout Fixes */
+.home__title-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* This takes up space but remains completely hidden visually */
+.home__title--clone {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* This overlays perfectly on top of the clone frame */
+.home__title--active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home__title span,
+#home-typed {
+  color: var(--first-color);
+}
+
+/* Typing Cursor alignment normalization */
+.typed-cursor {
+  color: var(--first-color);
+  font-size: var(--biggest-font-size);
+  line-height: 1.2;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.home__description {
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.home__images {
+  position: relative;
+  justify-self: center;
+  width: 280px;
+  height: 280px;
+}
+
+.home__img {
+  width: 220px;
+  height: 280px;
+  margin-inline: auto;
+  border: 2px solid var(--first-color);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 40px hsla(var(--hue), 75%, 60%, .2);
+}
+
+.home__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home__text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin-text 20s linear infinite;
+} 
+
+.home__text span {
+  position: absolute;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform-origin: 0 140px;
+}
+
+@keyframes spin-text {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.home__blob-1 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+
+.home__blob-2 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
 }
 
 /*=============== ABOUT SECTION ===============*/
@@ -426,6 +571,7 @@ address {
   font-size: var(--h1-font-size);
   line-height: 1.5;
   margin-bottom: 1.5rem;
+  
 }
 
 .about__title span {
@@ -685,6 +831,9 @@ address {
   width: 40px;
   height: auto;
 }
+.skills__item i {
+  font-size: 2.5rem;
+}
 
 /*=============== TESTIMONIALS SECTION ===============*/
 .testimonials__container {
@@ -888,6 +1037,7 @@ address {
   font-size: 1.25rem;
   transition: background-color .4s, color .4s;
 }
+
 
 .footer__social-link:hover {
   background-color: var(--first-color);
