@@ -11,11 +11,7 @@
     <meta name="author" content="Hanif Khan" />
 
     <!--=============== FAVICON ===============-->
-    <link
-      rel="shortcut icon"
-      href="assets/img/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 
     <!--=============== REMIXICONS ===============-->
     <link
@@ -82,37 +78,6 @@
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME SECTION ====================-->
-      <!-- <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__data">
-            <h3 class="home__subtitle">
-              Hi! I'm Hanif Khan — Based in Pakistan
-            </h3>
-            <h1 class="home__title">
-              Frontend Developer & <br />
-              <span id="home-typed">React Engineer</span>
-            </h1>
-            <p class="home__description">
-              I build UI systems that feel fast, scalable, and production-ready
-              — not just websites. Component architecture, state modeling, and
-              API-driven data flow, end to end.
-            </p>
-          </div>
-
-          <div class="home__images">
-            <div class="home__text">EXPLORE - MORE - LET'S -</div>
-            <div class="home__img">
-              <img
-                src="image (1).png"
-                alt="Hanif Khan — Frontend Developer"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="blob-small home__blob-1"></div>
-        <div class="blob-big home__blob-2"></div>
-      </section> -->
 
       <section class="home section" id="home">
         <div class="home__container container grid">
@@ -143,7 +108,7 @@
           <div class="home__images">
             <div class="home__text">EXPLORE - MORE - LET'S -</div>
             <div class="home__img">
-              <img src="image (1).png" alt="Hanif Khan — Frontend Developer" />
+              <img src="./assets/img/portfolio image.png" alt="Hanif Khan — Frontend Developer" />
             </div>
           </div>
         </div>
@@ -153,23 +118,26 @@
       </section>
 
       <!--==================== ABOUT SECTION ====================-->
-      <section class="about section" id="about">
+       <section class="about section" id="about">
         <div class="about__container container grid">
           <div class="about__data">
-            <h2 class="about__title">
-              About Me: Frontend Developer who builds
-              <span>React.js</span> applications with
-              <span>Redux Toolkit</span>, custom hooks, and REST API integration
-              — owning UI features from design to deployment.
-            </h2>
+            <h2 class="section__title">About <span>Me</span></h2>
+
+            <h3 class="about__title">
+              Frontend Developer building <span>React.js</span> apps with
+              <span>Redux Toolkit</span>
+            </h3>
+
             <p class="about__description">
-              With hands-on experience across 5 self-built production-style
-              apps, I design scalable component hierarchies and predictable
-              state systems. Sharpened through 250+ JavaScript practice problems
-              and currently building toward full-stack capability with Node.js,
-              TypeScript, and Next.js while completing a B.S. in Computer
-              Science at Gomal University.
+              I build production-style applications with custom hooks and REST API
+              integration, owning UI features from design to deployment. Across
+              5 self-built apps, I've designed scalable component hierarchies and
+              predictable state systems — sharpened through 250+ JavaScript
+              practice problems. I'm currently building toward full-stack
+              capability with Node.js, TypeScript, and Next.js while completing a
+              B.S. in Computer Science at Gomal University.
             </p>
+
             <a href="#contact" class="button about__button">
               Contact me <i class="ri-arrow-right-line"></i>
             </a>
@@ -178,250 +146,131 @@
       </section>
 
       <!--==================== WORK SECTION ====================-->
-        <section class="work section" id="work">
-          <h2 class="section__title">View My <span>Work</span></h2>
+      <section class="work section" id="work">
+        <h2 class="section__title">View My <span>Work</span></h2>
 
-          <div class="work__container container">
-            <div class="swiper work__swiper">
-              <div class="swiper-wrapper">
-                <!-- Project 1 -->
-                <article class="work__card swiper-slide">
-                  <div class="work__img-box">
-                    <img
-                      src="react-movie-hub.png"
-                      alt="React Movie Hub"
-                      class="work__img"
-                    />
-                    <a
-                      href="https://react-movie-hub-six.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="work__link"
-                      aria-label="View React Movie Hub live demo"
-                    >
-                      <i class="ri-arrow-right-up-line"></i>
-                    </a>
+        <div class="work__container container">
+          <div class="swiper work__swiper">
+            <div class="swiper-wrapper">
+              <!-- Project 1 -->
+              <article class="work__card swiper-slide">
+                <div class="work__img-box">
+                  <img src="./assets/img/react-movie-hub.png" alt="React Movie Hub" class="work__img" />
+                  <a href="https://react-movie-hub-six.vercel.app" target="_blank" rel="noopener noreferrer" class="work__link" aria-label="View React Movie Hub live demo">
+                    <i class="ri-arrow-right-up-line"></i>
+                  </a>
+                </div>
+                <div class="work__data">
+                  <span class="work__number">01</span>
+                  <h3 class="work__name">React Movie Hub</h3>
+                  <p class="work__description">
+                    Movie discovery app with Context API global state, TMDB REST API integration, live search/filtering, favorites with localStorage, and fully responsive layout. Built with React.js & Vite.
+                  </p>
+                  <div class="work__links">
+                    <a href="https://react-movie-hub-six.vercel.app" target="_blank" rel="noopener noreferrer" class="work__demo">Live Demo</a>
+                    <a href="https://github.com/9hanif78/react-movie-hub" target="_blank" rel="noopener noreferrer" class="work__github">GitHub</a>
                   </div>
-                  <div class="work__data">
-                    <span class="work__number">01</span>
-                    <h3 class="work__name">React Movie Hub</h3>
-                    <p class="work__description">
-                      Movie discovery app with Context API global state, TMDB REST
-                      API integration, live search/filtering, favorites with
-                      localStorage, and fully responsive layout. Built with
-                      React.js & Vite.
-                    </p>
-                    <div class="work__links">
-                      <a
-                        href="https://react-movie-hub-six.vercel.app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__demo"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/9hanif78/react-movie-hub"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__github"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- Project 2 -->
-                <article class="work__card swiper-slide">
-                  <div class="work__img-box">
-                    <img
-                      src="Redux-tool-kit.png"
-                      alt="Redux Toolkit Todo App"
-                      class="work__img"
-                    />
-                    <a
-                      href="https://redux-toolkit-todo-kappa.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="work__link"
-                      aria-label="View Redux Toolkit Todo live demo"
-                    >
-                      <i class="ri-arrow-right-up-line"></i>
-                    </a>
+              <!-- Project 2 -->
+              <article class="work__card swiper-slide">
+                <div class="work__img-box">
+                  <img src="./assets/img/Redux-tool-kit.png" alt="Redux Toolkit Todo App" class="work__img" />
+                  <a href="https://redux-toolkit-todo-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__link" aria-label="View Redux Toolkit Todo live demo">
+                    <i class="ri-arrow-right-up-line"></i>
+                  </a>
+                </div>
+                <div class="work__data">
+                  <span class="work__number">02</span>
+                  <h3 class="work__name">Redux Toolkit Todo App</h3>
+                  <p class="work__description">
+                    Task-management app with Redux Toolkit createSlice, clean separation of state logic and UI, real-time useSelector/useDispatch sync, and Tailwind CSS with accessible focus states.
+                  </p>
+                  <div class="work__links">
+                    <a href="https://redux-toolkit-todo-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__demo">Live Demo</a>
+                    <a href="https://github.com/9hanif78/redux-toolkit-todo" target="_blank" rel="noopener noreferrer" class="work__github">GitHub</a>
                   </div>
-                  <div class="work__data">
-                    <span class="work__number">02</span>
-                    <h3 class="work__name">Redux Toolkit Todo App</h3>
-                    <p class="work__description">
-                      Task-management app with Redux Toolkit createSlice, clean
-                      separation of state logic and UI, real-time
-                      useSelector/useDispatch sync, and Tailwind CSS with
-                      accessible focus states.
-                    </p>
-                    <div class="work__links">
-                      <a
-                        href="https://redux-toolkit-todo-kappa.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__demo"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/9hanif78/redux-toolkit-todo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__github"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- Project 3 -->
-                <article class="work__card swiper-slide">
-                  <div class="work__img-box">
-                    <img
-                      src="assets/img/currency-converter.png"
-                      alt="Currency Converter"
-                      class="work__img"
-                    />
-                    <a
-                      href="https://currency-converter-eight-inky.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="work__link"
-                      aria-label="View Currency Converter live demo"
-                    >
-                      <i class="ri-arrow-right-up-line"></i>
-                    </a>
+              <!-- Project 3 -->
+              <article class="work__card swiper-slide">
+                <div class="work__img-box">
+                  <img src="./assets/img/currency-converter.png" alt="Currency Converter" class="work__img" />
+                  <a href="https://currency-converter-eight-inky.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__link" aria-label="View Currency Converter live demo">
+                    <i class="ri-arrow-right-up-line"></i>
+                  </a>
+                </div>
+                <div class="work__data">
+                  <span class="work__number">03</span>
+                  <h3 class="work__name">Currency Converter</h3>
+                  <p class="work__description">
+                    Real-time currency conversion with custom useCurrencyInfo hook decoupling API logic from UI, live exchange rates via REST API, and instant input-output synchronization on every change.
+                  </p>
+                  <div class="work__links">
+                    <a href="https://currency-converter-eight-inky.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__demo">Live Demo</a>
+                    <a href="https://github.com/9hanif78/currency-converter" target="_blank" rel="noopener noreferrer" class="work__github">GitHub</a>
                   </div>
-                  <div class="work__data">
-                    <span class="work__number">03</span>
-                    <h3 class="work__name">Currency Converter</h3>
-                    <p class="work__description">
-                      Real-time currency conversion with custom useCurrencyInfo
-                      hook decoupling API logic from UI, live exchange rates via
-                      REST API, and instant input-output synchronization on every
-                      change.
-                    </p>
-                    <div class="work__links">
-                      <a
-                        href="https://currency-converter-eight-inky.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__demo"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/9hanif78/currency-converter"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__github"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- Project 4 -->
-                <article class="work__card swiper-slide">
-                  <div class="work__img-box">
-                    <img
-                      src="assets/img/work-img-4.png"
-                      alt="Creative Agency UI System"
-                      class="work__img"
-                    />
-                    <a
-                      href="https://creative-agency-studio.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="work__link"
-                      aria-label="View Creative Agency live demo"
-                    >
-                      <i class="ri-arrow-right-up-line"></i>
-                    </a>
+              <!-- Project 4 -->
+              <article class="work__card swiper-slide">
+                <div class="work__img-box">
+                  <img src="assets/img/Online -Agency.png" alt="Creative Agency UI System" class="work__img" />
+                  <a href="https://creative-agency-studio.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__link" aria-label="View Creative Agency live demo">
+                    <i class="ri-arrow-right-up-line"></i>
+                  </a>
+                </div>
+                <div class="work__data">
+                  <span class="work__number">04</span>
+                  <h3 class="work__name">Creative Agency UI System</h3>
+                  <p class="work__description">
+                    Multi-section responsive landing page with vanilla JavaScript, Intersection Observer scroll-triggered animations, sticky navbar, and grid-based layout replicating production agency UX patterns.
+                  </p>
+                  <div class="work__links">
+                    <a href="https://creative-agency-studio.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__demo">Live Demo</a>
+                    <a href="https://github.com/9hanif78/creative-agency-website" target="_blank" rel="noopener noreferrer" class="work__github">GitHub</a>
                   </div>
-                  <div class="work__data">
-                    <span class="work__number">04</span>
-                    <h3 class="work__name">Creative Agency UI System</h3>
-                    <p class="work__description">
-                      Multi-section responsive landing page with vanilla
-                      JavaScript, Intersection Observer scroll-triggered
-                      animations, sticky navbar, and grid-based layout replicating
-                      production agency UX patterns.
-                    </p>
-                    <div class="work__links">
-                      <a
-                        href="https://creative-agency-studio.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__demo"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/9hanif78/creative-agency-website"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__github"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <!-- Project 5 -->
-                <article class="work__card swiper-slide">
-                  <div class="work__img-box">
-                    <img
-                      src="assets/img/work-img-5.png"
-                      alt="eCommerce Storefront UI"
-                      class="work__img"
-                    />
-                    <a
-                      href="https://e-commerce-website-chi-eight-17.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="work__link"
-                      aria-label="View eCommerce Storefront live demo"
-                    >
-                      <i class="ri-arrow-right-up-line"></i>
-                    </a>
-                  </div>
-                  <div class="work__data">
-                    <span class="work__number">05</span>
-                    <h3 class="work__name">eCommerce Storefront UI</h3>
-                    <p class="work__description">
-                      Responsive storefront with vanilla JavaScript — nav toggle,
-                      dropdowns, scroll-aware header, cookie banner, lazy loading,
-                      and form validation via direct DOM manipulation.
-                    </p>
-                    <div class="work__links">
-                      <a
-                        href="https://e-commerce-website-chi-eight-17.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__demo"
-                        >Live Demo</a
-                      >
-                      <a
-                        href="https://github.com/9hanif78/eCommerce-website"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work__github"
-                        >GitHub</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
+                </div>
+              </article>
 
-              <div class="swiper-button-prev work__swiper-prev">
-                <i class="ri-arrow-left-s-line"></i>
-              </div>
-              <div class="swiper-button-next work__swiper-next">
-                <i class="ri-arrow-right-s-line"></i>
-              </div>
+              <!-- Project 5 -->
+              <article class="work__card swiper-slide">
+                <div class="work__img-box">
+                  <img src="assets/img/eCommerece website.png" alt="eCommerce Storefront UI" class="work__img" />
+                  <a href="https://e-commerce-website-chi-eight-17.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__link" aria-label="View eCommerce Storefront live demo">
+                    <i class="ri-arrow-right-up-line"></i>
+                  </a>
+                </div>
+                <div class="work__data">
+                  <span class="work__number">05</span>
+                  <h3 class="work__name">eCommerce Storefront UI</h3>
+                  <p class="work__description">
+                    Responsive storefront with vanilla JavaScript — nav toggle, dropdowns, scroll-aware header, cookie banner, lazy loading, and form validation via direct DOM manipulation.
+                  </p>
+                  <div class="work__links">
+                    <a href="https://e-commerce-website-chi-eight-17.vercel.app/" target="_blank" rel="noopener noreferrer" class="work__demo">Live Demo</a>
+                    <a href="https://github.com/9hanif78/eCommerce-website" target="_blank" rel="noopener noreferrer" class="work__github">GitHub</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Pagination dots -->
+            <div class="swiper-pagination work__swiper-pagination"></div>
+
+            <div class="swiper-button-prev work__swiper-prev">
+              <i class="ri-arrow-left-s-line"></i>
+            </div>
+            <div class="swiper-button-next work__swiper-next">
+              <i class="ri-arrow-right-s-line"></i>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
 
       <!--==================== SERVICES SECTION ====================-->
       <section class="services section" id="service">
@@ -704,89 +553,6 @@
       </section>
 
       <!--==================== CONTACT SECTION ====================-->
-
-        <h2 class="section__title">Contact <span>Me</span></h2>
-
-        <div class="contact__container container grid">
-          <form action="" class="contact__form grid" id="contact-form">
-            <div class="contact__group">
-              <label for="user-name" class="contact__label">Name</label>
-              <input
-                type="text"
-                name="user_name"
-                id="user-name"
-                class="contact__input"
-                placeholder="Your name"
-                required
-              />
-            </div>
-
-            <div class="contact__group">
-              <label for="user-email" class="contact__label">Email</label>
-              <input
-                type="email"
-                name="user_email"
-                id="user-email"
-                class="contact__input"
-                placeholder="Your email"
-                required
-              />
-            </div>
-
-            <div class="contact__group contact__area">
-              <label for="user-message" class="contact__label">Message</label>
-              <textarea
-                name="user_message"
-                id="user-message"
-                cols="30"
-                rows="10"
-                class="contact__input contact__textarea"
-                placeholder="Write your message"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="button contact__button">
-              Send Message <i class="ri-send-plane-line"></i>
-            </button>
-
-            <p class="contact__message" id="contact-message"></p>
-          </form>
-
-          <div class="contact__data">
-            <h3 class="contact__title">Let's build something together</h3>
-
-            <div class="contact__info">
-              <i class="ri-mail-line contact__icon"></i>
-              <div>
-                <h4 class="contact__subtitle">Email</h4>
-                <address class="contact__address">
-                  <a href="mailto:9hanif78@gmail.com">9hanif78@gmail.com</a>
-                </address>
-              </div>
-            </div>
-
-            <div class="contact__info">
-              <i class="ri-phone-line contact__icon"></i>
-              <div>
-                <h4 class="contact__subtitle">Phone</h4>
-                <address class="contact__address">
-                  <a href="tel:+923039607737">+92 303 9607737</a>
-                </address>
-              </div>
-            </div>
-
-            <div class="contact__info">
-              <i class="ri-map-pin-line contact__icon"></i>
-              <div>
-                <h4 class="contact__subtitle">Location</h4>
-                <address class="contact__address">Islamabad, Pakistan</address>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-    
       <section class="contact section" id="contact">
   <h2 class="section__title">Contact <span>Me</span></h2>
 
@@ -868,7 +634,7 @@
       </div>
     </div>
   </div>
-</section>
+      </section>
 
 
   </main>
@@ -876,10 +642,10 @@
     <!--==================== FOOTER ====================-->
     <footer class="footer">
       <div class="footer__container container grid">
-        <h2 class="footer__title">
-          LET'S BUILD PRODUCTION-READY UI SYSTEMS TOGETHER — JUNIOR FRONTEND
-          ENGINEER OPEN TO OPPORTUNITIES.
-        </h2>
+       <h2 class="footer__title">
+          Let's build production-ready UI systems together — junior frontend
+          engineer open to opportunities.
+      </h2>
 
         <div class="footer__content grid">
           <ul class="footer__links">

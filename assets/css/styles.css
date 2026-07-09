@@ -2,10 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Syne:wght@400..800&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
+
 :root {
   --header-height: 3.5rem;
 
-  --hue: 110;
+  --hue: 255; 
   --first-color: hsl(var(--hue), 75%, 60%);
   --gradient-color: linear-gradient(90deg, hsl(var(--hue), 75%, 60%) 0%,
                                            hsl(var(--hue), 100%, 85%) 40%,
@@ -316,103 +317,6 @@ address {
   box-shadow: 0 2px 16px hsla(var(--hue), 12%, 4%, .3);
 }
 
-/*=============== HOME SECTION ===============*/
-/* .home {
-  position: relative;
-  padding-top: calc(var(--header-height) + 3rem);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.home__container {
-  row-gap: 3rem;
-}
-
-.home__subtitle {
-  font-size: var(--normal-font-size);
-  color: var(--text-color);
-  font-weight: var(--font-medium);
-  margin-bottom: 1rem;
-}
-
-.home__title {
-  font-size: var(--biggest-font-size);
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  
-}
-
-.home__title span,
-#home-typed {
-  color: var(--first-color);
-}
-
-.home__description {
-  max-width: 480px;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.home__images {
-  position: relative;
-  justify-self: center;
-  width: 280px;
-  height: 280px;
-}
-
-.home__img {
-  width: 220px;
-  height: 280px;
-  margin-inline: auto;
-  border: 2px solid var(--first-color);
-  border-radius: 2rem;
-  overflow: hidden;
-  box-shadow: 0 0 40px hsla(var(--hue), 75%, 60%, .2);
-}
-
-.home__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.home__text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: spin-text 20s linear infinite;
-} 
-
-
-
-.home__text span {
-  position: absolute;
-  font-size: var(--smaller-font-size);
-  font-weight: var(--font-semi-bold);
-  color: var(--first-color);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transform-origin: 0 140px;
-}
-
-@keyframes spin-text {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.home__blob-1 {
-  top: 20%;
-  right: 10%;
-}
-
-.home__blob-2 {
-  bottom: 10%;
-  left: 5%;
-} */
-
 
 /*=============== HOME SECTION ===============*/
 .home {
@@ -436,11 +340,20 @@ address {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
+ 
+ 
+}
+@media screen and (max-width:768px) {
+  .home__data {
+    text-align: center;
+  }
+  
 }
 
 .home__data {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
 }
 
 .home__subtitle {
@@ -569,9 +482,8 @@ address {
 
 .about__title {
   font-size: var(--h1-font-size);
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
 }
 
 .about__title span {
@@ -579,23 +491,20 @@ address {
 }
 
 .about__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
 
 .about__button {
   margin-inline: auto;
+  /* no color override — inherits var(--black-color) from .button for correct contrast */
 }
 
 /*=============== WORK SECTION ===============*/
-.work__container {
-  overflow: hidden;
-}
-
-.work__swiper {
-  padding-bottom: 3rem;
-  overflow: visible;
-}
+.work__container { overflow: hidden; }
+.work__swiper { padding-bottom: 3rem; overflow: visible; }
 
 .work__card {
   background-color: var(--container-color);
@@ -610,10 +519,7 @@ address {
   box-shadow: 0 16px 40px hsla(var(--hue), 75%, 60%, .15);
 }
 
-.work__img-box {
-  position: relative;
-  overflow: hidden;
-}
+.work__img-box { position: relative; overflow: hidden; }
 
 .work__img {
   width: 100%;
@@ -622,9 +528,7 @@ address {
   transition: transform .4s;
 }
 
-.work__card:hover .work__img {
-  transform: scale(1.05);
-}
+.work__card:hover .work__img { transform: scale(1.05); }
 
 .work__link {
   position: absolute;
@@ -641,13 +545,9 @@ address {
   transition: transform .4s;
 }
 
-.work__link:hover {
-  transform: scale(1.1);
-}
+.work__link:hover { transform: scale(1.1); }
 
-.work__data {
-  padding: 1.5rem;
-}
+.work__data { padding: 1.5rem; }
 
 .work__number {
   font-size: var(--small-font-size);
@@ -666,10 +566,7 @@ address {
   margin-bottom: 1rem;
 }
 
-.work__links {
-  display: flex;
-  gap: 1rem;
-}
+.work__links { display: flex; gap: 1rem; }
 
 .work__demo,
 .work__github {
@@ -680,9 +577,7 @@ address {
 }
 
 .work__demo:hover,
-.work__github:hover {
-  opacity: .7;
-}
+.work__github:hover { opacity: .7; }
 
 .work__swiper-prev,
 .work__swiper-next {
@@ -696,19 +591,42 @@ address {
 }
 
 .work__swiper-prev::after,
-.work__swiper-next::after {
-  display: none;
-}
+.work__swiper-next::after { display: none; }
 
 .work__swiper-prev i,
-.work__swiper-next i {
-  font-size: 1.5rem;
-}
+.work__swiper-next i { font-size: 1.5rem; }
 
 .work__swiper-prev:hover,
 .work__swiper-next:hover {
   background-color: var(--first-color) !important;
   color: var(--black-color) !important;
+}
+
+/* Pagination dots */
+.work__swiper-pagination {
+  position: static !important;
+  margin-top: 2rem;
+  display: flex !important;
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+}
+
+.work__swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: var(--border-color);
+  opacity: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 !important;
+  transition: background-color .4s, width .4s;
+}
+
+.work__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+  width: 24px;
+  border-radius: 4px;
 }
 
 /*=============== SERVICES SECTION ===============*/
@@ -999,6 +917,7 @@ address {
   margin-inline: auto;
 }
 
+
 .footer__content {
   justify-content: space-between;
   align-items: center;
@@ -1138,6 +1057,11 @@ address {
   .footer__content {
     display: flex;
   }
+.services__container {
+    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+  } 
+
 }
 
 @media (width >= 1150px) {
@@ -1207,7 +1131,7 @@ address {
   .services__container {
     max-width: 900px;
     grid-template-columns: repeat(2, 1fr);
-  }
+  } 
 
   .testimonials__card {
     min-width: 380px;

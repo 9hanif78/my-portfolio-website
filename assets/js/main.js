@@ -63,34 +63,69 @@ const scrollHeader = () => {
       header.classList.remove('scroll-header')
    }
 }
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener('scroll', scrollHeader);
+
+/*=============== SWIPER WORK ===============*/
+// if (typeof Swiper !== 'undefined') {
+//   new Swiper('.work__swiper', {
+//     loop: true,
+//     spaceBetween: 24,
+//     grabCursor: true,
+//     slidesPerView: 1,
+//     speed: 500,
+//     autoplay: {
+//       delay: 2000,
+//       disableOnInteraction: false,
+//       pauseOnMouseEnter: true,
+//     },
+//     pagination: {
+//       el: '.work__swiper-pagination',
+//       clickable: true,
+//     },
+//     navigation: {
+//       nextEl: '.work__swiper-next',
+//       prevEl: '.work__swiper-prev',
+//     },
+//     breakpoints: {
+//       640: { slidesPerView: 1.5 },
+//       768: { slidesPerView: 2 },
+//       1150: { slidesPerView: 2.5 },
+//     },
+//   });
+// }
 
 /*=============== SWIPER WORK ===============*/
 if (typeof Swiper !== 'undefined') {
-   new Swiper('.work__swiper', {
-      loop: true,
-      spaceBetween: 24,
-      grabCursor: true,
-      slidesPerView: 1,
-      navigation: {
-         nextEl: '.work__swiper-next',
-         prevEl: '.work__swiper-prev',
-      },
-      breakpoints: {
-         640: {
-            slidesPerView: 1.5,
-         },
-         768: {
-            slidesPerView: 2,
-         },
-         1150: {
-            slidesPerView: 2.5,
-         },
-      },
-   })
+  new Swiper('.work__swiper', {
+    rewind: true,          // seamless wrap-to-start without slide duplication (fixes inconsistent slide count)
+    spaceBetween: 24,
+    grabCursor: true,
+    slidesPerView: 1,
+    speed: 600,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+
+    pagination: {
+      el: '.work__swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.work__swiper-next',
+      prevEl: '.work__swiper-prev',
+    },
+
+    breakpoints: {
+      640: { slidesPerView: 1.5 },
+      768: { slidesPerView: 2 },
+      1150: { slidesPerView: 2.5 },
+    },
+  });
 }
-
-
 
 /*=============== SERVICES ACCORDION ===============*/
 const serviceCards = document.querySelectorAll('.services__card')
